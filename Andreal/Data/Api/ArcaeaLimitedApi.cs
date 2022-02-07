@@ -1,6 +1,6 @@
-﻿using AndrealClient.Data.Json.Arcaea.ArcaeaLimited;
+﻿using AndrealClient.Data.Json;
+using AndrealClient.Data.Json.Arcaea.ArcaeaLimited;
 using Newtonsoft.Json;
-using ThesareaClient.Data.Json;
 
 namespace AndrealClient.Data.Api;
 internal static class ArcaeaLimitedApi

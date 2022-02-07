@@ -1,7 +1,8 @@
 ﻿using AndrealClient.AndreaMessage;
+using AndrealClient.Core;
+using AndrealClient.Data.Json;
 using AndrealClient.Data.Json.Arcaea.BotArcApi;
 using Newtonsoft.Json;
-using ThesareaClient.Data.Json;
 
 namespace AndrealClient.Data.Api;
 
@@ -60,7 +61,7 @@ internal static class ArcaeaUnlimitedApi
     internal static async Task IconAssets(int partner, bool awakened, Core.Path pth) =>
         await GetStream($"assets/icon?partner={partner}&awakened={(awakened ? "true" : "false")}", pth);
 
-    internal static TextMessage GetErrorMessage(RobotReply.RobotReply info, int status, string message)
+    internal static TextMessage GetErrorMessage(RobotReply info, int status, string message)
     {
         return status switch
                {

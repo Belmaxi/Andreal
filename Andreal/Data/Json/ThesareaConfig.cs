@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace ThesareaClient.Data.Json;
+namespace AndrealClient.Data.Json;
 
 public class ThesareaConfig
 {

@@ -1,11 +1,12 @@
 ﻿using AndrealClient.AndreaMessage;
+using AndrealClient.Core;
 using AndrealClient.Model.Arcaea;
 
 namespace AndrealClient.Utils;
 
 internal static class AliasErrorHelper
 {
-    internal static TextMessage? GetSongAliasErrorMessage(RobotReply.RobotReply info, int status, SongInfo[] ls)
+    internal static TextMessage? GetSongAliasErrorMessage(RobotReply info, int status, SongInfo[] ls)
     {
         return (status switch
                 {

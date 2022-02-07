@@ -1,7 +1,6 @@
-using System.Net;
 using AndrealClient.AndreaMessage;
 
-namespace AndrealClient.RobotReply;
+namespace AndrealClient.Core;
 
 public class RobotReply
 {

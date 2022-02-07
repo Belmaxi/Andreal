@@ -2,7 +2,6 @@
 using AndrealClient.AndreaMessage;
 using AndrealClient.Data.Sqlite;
 using AndrealClient.Executor;
-using AndrealClient.RobotReply;
 using AndrealClient.Utils;
 using Newtonsoft.Json;
 using Sora.Entities;
@@ -25,10 +24,10 @@ internal class MessageInfo
 
     internal Lazy<BotUserInfo?> UserInfo => new(() => BotUserInfo.Get(FromQq));
 
-    internal RobotReply.RobotReply RobotReply => _reply.Value;
+    internal RobotReply RobotReply => _reply.Value;
 
-    private static Lazy<RobotReply.RobotReply> _reply
-        = new(() => JsonConvert.DeserializeObject<RobotReply.RobotReply>(File.ReadAllText(Path.RobotReply))!);
+    private static Lazy<RobotReply> _reply
+        = new(() => JsonConvert.DeserializeObject<RobotReply>(File.ReadAllText(Path.RobotReply))!);
 
     
     private static MessageBody FromMessageChain(MessageChain messages)
