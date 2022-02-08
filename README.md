@@ -10,7 +10,10 @@ AndreaBot开源版本，保留了大多数功能。
 >
 > /p chart
 >
-> /a b30 official (若apitoken未填写)
+> /a b30 official (*)
+
+
+注*：若申请并填写了limitedapitoken，则可用
 
 ----
 
@@ -36,13 +39,24 @@ AndreaBot开源版本，保留了大多数功能。
 
 #### 部署方法
 
-* （可省略）向lowiro写邮件申请 ArcaeaLimitedApi Token（详见 **常见问题**-**什么是ArcaeaLimitedApi？如何申请ApiToken？**）
-* 向Awbugl申请 ArcaeaUnlimitedApi Token（详见 **常见问题**-**什么是ArcaeaUnlimitedApi？如何申请ApiToken？**）
-* 下载[OneKeyAndreal](https://github.com/Awbugl/Andreal/releases/)
-* 记事本打开 go-cqhttp/config.yml，填写Bot账号密码并保存(也可省略此步，选择扫码登录)
-* 记事本打开 Andreal/apiconfig.json，填写ApiEndpoint、Token并保存
+* (可省略) 向lowiro写邮件申请 ArcaeaLimitedApi (*) Token
+
+* 向Awbugl申请 ArcaeaUnlimitedApi (**) Token
+
+* 下载 [OneKeyAndreal](https://github.com/Awbugl/Andreal/releases/)
+
+* (若扫码登录，则可省略) 记事本打开 go-cqhttp/config.yml，填写Bot账号密码并保存
+
+* 记事本打开 apiconfig.json，填写ApiEndpoint、Token并保存（文件路径详见**配置文件介绍**）
+
 * 安装 ..\OneKeyAndreal\AndrealClient\Andreal\Fonts 目录下的字体文件
+
 * 双击 start.bat，若一切顺利，此时您的Bot就已可用。
+
+注*：ArcaeaLimitedApi: Lowiro为开发者提供的官方查分接口，详情可移步 [ArcaeaLimitedAPI的相关信息及申请方法](https://www.bilibili.com/read/cv14491110/)
+查看。
+
+注**：ArcaeaUnlimitedApi: 由TheSnowfield与Awbugl基于BotArcAPI开发的项目。详情请咨询Awbugl。
 
 ----
 
@@ -76,22 +90,10 @@ Q: **什么是Andreal？**
 
 > A: 基于ArcaeaUnlimitedApi的AndreaBot开源项目。Andreal = real andrea。
 
-
-----
-Q: **什么是ArcaeaLimitedApi？如何申请ApiToken？**
-
-> A: Lowiro为开发者提供的官方查分接口，详情可移步 [ArcaeaLimitedAPI的相关信息及申请方法](https://www.bilibili.com/read/cv14491110/)  查看。
-
-
-----
-Q: **什么是ArcaeaUnlimitedApi？如何申请ApiToken？**
-
-> A: 由TheSnowfield与Awbugl基于BotArcAPI开发的项目。详情请咨询Awbugl。
-
 ----
 Q: **我部署Andreal会得到什么？**
 
-> A: 得到属于自己的可用的Arc查分Bot。
+> A: 自己的Arc查分Bot。
 
 ----
 Q: **使用Andreal有何限制？**
@@ -101,7 +103,7 @@ Q: **使用Andreal有何限制？**
 ----
 Q: **用户信息在哪里存储？**
 
-> A: Andreal使用sqlite存储用户数据。
+> A: Andreal使用本地sqlite存储用户数据。由于**数据共享协议**，我们将共享用户的Arcaea用户名、游玩记录等，请知悉。
 
 ----
 Q: **想要自己部署Andreal需要具备什么知识？部署在哪里？**
@@ -113,8 +115,11 @@ Q:  **为什么部署之后Bot无法查分？**
 
 > A:  请检查
 >
-> 您是否正确配置了所有配置项         
-> 您是否申请并正确填写了ApiToken
+> 配置项配置是否正确
+>
+> Andreal是否为最新版本
+>
+> ApiToken是否申请并正确填写
 
 ----    
 Q:  **配置文件时出现了问题/无法访问Github下载文件？**
