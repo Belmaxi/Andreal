@@ -40,7 +40,7 @@ AndreaBot开源版本，保留了大多数功能。
 * 向Awbugl申请 ArcaeaUnlimitedApi Token（详见 **常见问题**-**什么是ArcaeaUnlimitedApi？如何申请ApiToken？**）
 * 下载[OneKeyAndreal](https://github.com/Awbugl/Andreal/releases/)
 * 记事本打开 go-cqhttp/config.yml，填写Bot账号密码并保存(也可省略此步，选择扫码登录)
-* 记事本打开 Thesarea/apiconfig.json，填写ApiEndpoint、Token并保存
+* 记事本打开 Andreal/apiconfig.json，填写ApiEndpoint、Token并保存
 * 安装 ..\OneKeyAndreal\AndrealClient\Andreal\Fonts 目录下的字体文件
 * 双击 start.bat，若一切顺利，此时您的Bot就已可用。
 
