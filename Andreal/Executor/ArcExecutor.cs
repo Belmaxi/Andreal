@@ -392,8 +392,12 @@ internal class ArcExecutor : ExecutorBase
     {
         if (CommandLength == 0) return RobotReply.ParameterLengthError;
 
-        var alias = (await ArcaeaUnlimitedApi.SongAlias(Command[0])).DeserializeContent<List<string>>();
+        var data = await ArcaeaUnlimitedApi.SongAlias(Command[0]);
+        
+        if (data.Status != 0) return ArcaeaUnlimitedApi.GetErrorMessage(RobotReply, data.Status, data.Message);
 
+        var alias = data.DeserializeContent<List<string>>();
+        
         return alias.Count > 0
             ? $"在数据库中的别名列表：\n" + alias.Aggregate((i, j) => i + "\n" + j)
             : "该曲目暂无别名收录。";
