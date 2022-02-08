@@ -28,7 +28,7 @@ AndreaBot开源版本，保留了大多数功能。
 
 #### 用户须知
 
-> 您应知悉，使用本模块的相关指令将违反 [Arcaea使用条款](https://arcaea.lowiro.com/zh/terms_of_service) 中的 3.2-4 和 3.2-6，以及 [Arcaea二次创作管理条例](https://arcaea.lowiro.com/zh/derivative_policy) 。
+> 您应知悉，使用本项目将违反 [Arcaea使用条款](https://arcaea.lowiro.com/zh/terms_of_service) 中的 3.2-4 和 3.2-6，以及 [Arcaea二次创作管理条例](https://arcaea.lowiro.com/zh/derivative_policy) 。
 >
 > 因使用本项目而造成的损失，Andreal开发组不予承担任何责任。
 
